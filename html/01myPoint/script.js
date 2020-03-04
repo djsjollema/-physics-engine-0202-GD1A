@@ -9,11 +9,15 @@ canvas.height = height;
 
 // begin hier met jouw code voor deze opdracht
 
-let myPoint = new Point(500,200,20,"red");
-myPoint.draw(context);
-
-let myPoint2 = new Point(100,100,40,"green");
-myPoint2.draw(context);
-
-let myPoint3 = new Point(200,400,80,"blue");
-myPoint3.draw(context);
+for(let i=0; i<100;i++){
+  let x = getRandomInt(0,width);
+  let y = getRandomInt(0,height);
+  let radius = getRandomInt(10,50);
+  let r =getRandomInt(0,255);
+  let g = getRandomInt(0,255);
+  let b = getRandomInt(0,255);
+  let a = 0.4;
+  let color = "rgba(" + r + "," + g + "," + b + "," + a +")";
+  let myPoint = new Point(x,y,radius,color);
+  myPoint.draw(context);
+}
